@@ -1,7 +1,7 @@
-// API Key from OpenWeatherMap (Sign up at https://openweathermap.org/api to get your own key)
-const apiKey = "6fda314fe036bf0a17882ae4ccf480a5"; // Replace with your API key
 
-// Function to fetch weather data
+const apiKey = "6fda314fe036bf0a17882ae4ccf480a5"; 
+
+
 async function getWeather(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -19,7 +19,7 @@ async function getWeather(city) {
     }
 }
 
-// Function to display weather data
+
 function displayWeather(data) {
     const weatherResult = document.getElementById("weatherResult");
     const cityName = data.name;
@@ -35,9 +35,9 @@ function displayWeather(data) {
     `;
 }
 
-// Event listener for form submission
+
 document.getElementById("weatherForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault(); 
     const city = document.getElementById("cityInput").value;
     getWeather(city);
 });
