@@ -9,18 +9,25 @@
 <body>
     <div class="container">
         <h1>Weather App</h1>
+        
         <form id="weatherForm">
-            <input type="text" id="cityInput" placeholder="Enter city name" required>
+            <label for="cityInput">Enter City:</label>
+            <input type="text" id="cityInput" placeholder="E.g., New York, Tokyo" required>
             <button type="submit">Get Weather</button>
         </form>
-        <div id="weatherResult">
-            <div id="weatherCity"></div>
-            <div id="weatherDescription"></div>
-            <div id="weatherTemperature"></div>
-            <div id="weatherIcon"></div>
-        </div>
-        
+
+        <section id="weatherResult" class="hidden">
+            <h2 id="weatherCity"></h2>
+            <div class="weather-info">
+                <div id="weatherIcon"></div>
+                <p id="weatherDescription"></p>
+                <p><strong>Temperature:</strong> <span id="weatherTemperature"></span>°C</p>
+                <p><strong>Humidity:</strong> <span id="weatherHumidity"></span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="weatherWind"></span> km/h</p>
+            </div>
+        </section>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
