@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Weather App</h1>
         
         <form id="weatherForm">
-            <label for="cityInput">Enter City:</label>
-            <input type="text" id="cityInput" placeholder="E.g., New York, Tokyo" required>
-            <button type="submit">Get Weather</button>
+            <div class="input-group">
+                <input type="text" id="cityInput" placeholder="Enter city name..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
         </form>
 
         <section id="weatherResult" class="hidden">
@@ -26,6 +28,10 @@
                 <p><strong>Wind Speed:</strong> <span id="weatherWind"></span> km/h</p>
             </div>
         </section>
+
+        <footer>
+            <p>Powered by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
